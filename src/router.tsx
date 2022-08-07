@@ -4,6 +4,8 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 
 import { About } from 'Pages/About';
 import { Home } from 'Pages/Home';
+import { Search } from 'Pages/Home/components/Search';
+import { SearchArea } from 'Pages/Home/components/SearchArea';
 import { ReportIssue } from 'Pages/ReportIssue';
 import { AppRoute } from 'enums';
 
@@ -31,7 +33,10 @@ export function Router({
           <PageLayout isDarkMode={isDarkMode} setDarkMode={setDarkMode} />
         }
       >
-        <Route index element={<Home />} />
+        <Route element={<Home />}>
+          <Route index element={<Search />} />
+          <Route path=":area" element={<SearchArea />} />
+        </Route>
         <Route path={AppRoute.About} element={<About />} />
         <Route path={AppRoute.ReportIssue} element={<ReportIssue />} />
       </Route>

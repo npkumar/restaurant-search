@@ -2,13 +2,15 @@ import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 import { Outlet } from 'react-router-dom';
 
-import { HomeHeadline, HomeWrapper } from './styles';
+import { PageWrapper } from 'Layouts';
+
+import { HomeHeadline } from './styles';
 
 export function Home(): JSX.Element {
   const [t, { language }] = useTranslation();
 
   return (
-    <HomeWrapper>
+    <PageWrapper>
       <HomeHeadline>{t('attributes.titles.headline')}</HomeHeadline>
       <Outlet />
       <Helmet>
@@ -16,6 +18,6 @@ export function Home(): JSX.Element {
           'keywords.app_name'
         )}`}</title>
       </Helmet>
-    </HomeWrapper>
+    </PageWrapper>
   );
 }
