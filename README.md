@@ -1,14 +1,21 @@
-# Demo
+# Restaurant Search
 
-DEMO: []()
+DEMO: [restaurants-japan](https://restaurants-japan.netlify.app/)
 
 ## Screenshots
+
+| Mobile  | Tablet | Desktop | 
+| ------------- | ------------- | ------------- |
+| ![mobile](https://user-images.githubusercontent.com/7235671/183287672-bbf81b61-64b3-438a-a455-588ee17357f9.gif)  | ![tablet](https://user-images.githubusercontent.com/7235671/183287676-d0b2479a-ebbc-4398-94ac-38f8e5ce325c.gif)  | ![deskop](https://user-images.githubusercontent.com/7235671/183287678-5c1c5b20-25bc-46ca-acfa-6d6c4c3bc4ce.gif)  |
+
 
 ## Assumptions
 
 Made with [spa-boilerplate](https://github.com/tablecheck/spa-boilerplate)
 
 - Responsive for mobile / tablet / desktop
+- Implemented autocomplete dropdown
+- Implemented search by location based on url path - also prefills autocomplete component as applicable and url path with correct / available location
 - [Tablekit](http://tablekit.tablecheck.com/) was available - reused component system, also helped with existing dark mode.
 - `@emotion/styled` was available - utilized for styling
 - `react-popper` was available - utilized this as part of autocomplete component. This part could be refactored if popper dropdowns were to be used elsewhere in application. Right now, left as is.
@@ -20,6 +27,8 @@ Made with [spa-boilerplate](https://github.com/tablecheck/spa-boilerplate)
 - `en` and `ja` translations have been added for new features
 - All unit tests using `jest` for redux and most of new feature components have been written
 - Clicking on hotel name on the hotel detail panel will open it's location on google map in a new tab.
+- `react-spring` was available - probably would like to use this for animations in future 
+- Please follow existing `Getting started`, `Running tests` and `Deploy to production` sections for corresponding information.
 
 ## Getting started
 
