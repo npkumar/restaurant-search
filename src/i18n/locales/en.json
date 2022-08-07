@@ -20,6 +20,8 @@
     }
   },
   "keywords": {
+    "search": "Search by location",
+    "error_generic": "Something went wrong!",
     "thank_you": "Thank you! We'll review your submission",
     "anonymous": "Anonymous",
     "your_name": "Your name",

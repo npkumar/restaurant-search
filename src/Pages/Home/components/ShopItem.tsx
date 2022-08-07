@@ -56,7 +56,7 @@ export function ShopItem({ shop }: { shop: ShopsEntity }): JSX.Element {
             {shop?.budget_dinner_min && shop?.budget_dinner_max && (
               <span>
                 <Icon icon={tciSunrise} />
-                {shop?.budget_dinner_min} ~ {shop?.budget_lunch_max}
+                {shop?.budget_dinner_min} ~ {shop?.budget_dinner_max}
               </span>
             )}
           </StyledPriceContainer>

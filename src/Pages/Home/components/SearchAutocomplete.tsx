@@ -22,7 +22,7 @@ export function SearchAutoComplete(): JSX.Element {
   const dispatch = useAppDispatch();
 
   const [t] = useTranslation();
-  const { isLoading, isFetching, data } = useAutocomplete(searchTerm);
+  const { isError, isLoading, isFetching, data } = useAutocomplete(searchTerm);
 
   const [referenceElement, setReferenceElement] =
     React.useState<HTMLInputElement | null>(null);
@@ -84,7 +84,9 @@ export function SearchAutoComplete(): JSX.Element {
         }
         name="name"
         shouldFitContainer
-        placeholder={t('keywords.anonymous')}
+        placeholder={
+          isError ? t('keywords.error_generic') : t('keywords.search')
+        }
         ref={setReferenceElement}
         onChange={(e) => {
           setValue(e.target.value);

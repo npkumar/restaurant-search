@@ -8,20 +8,22 @@ export interface SearchState {
   searchTerm?: string;
   locations?: LocationsEntity[];
   location?: LocationsEntity | null;
-  shops?: ShopsEntity[] | null;
   shop?: ShopsEntity | null;
 }
 
 export const initialState: SearchState = {
   locations: [],
   isDropdownOpen: false,
-  searchTerm: ''
+  searchTerm: '',
+  location: null,
+  shop: null
 };
 
 export const searchSlice = createSlice({
   name: 'search',
   initialState,
   reducers: {
+    resetSearch: () => initialState,
     setLocations: (state, action: PayloadAction<LocationsEntity[]>) => {
       state.locations = action.payload;
 
@@ -53,6 +55,7 @@ export const searchSlice = createSlice({
 });
 
 export const {
+  resetSearch,
   setSearchTerm,
   setLocations,
   setDropdownOpen,

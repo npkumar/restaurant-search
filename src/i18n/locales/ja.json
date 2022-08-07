@@ -20,6 +20,8 @@
     }
   },
   "keywords": {
+    "search": "場所から探す",
+    "error_generic": "エラーが発生しました。!",
     "thank_you": "ありがとうございました！提出物を確認します",
     "anonymous": "匿名",
     "your_name": "あなたの名前",
